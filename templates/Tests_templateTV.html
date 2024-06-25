@@ -1,0 +1,15 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Tests_init() hook (in hooks/Tests.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Tests-teacher_id-<%%VALUE(id)%%>" class="Tests-teacher_id"><%%SELECT%%><%%VALUE(teacher_id)%%><%%ENDSELECT%%></td>
+		<td id="Tests-assignments_id-<%%VALUE(id)%%>" class="Tests-assignments_id"><%%SELECT%%><%%VALUE(assignments_id)%%><%%ENDSELECT%%></td>
+		<td id="Tests-date-<%%VALUE(id)%%>" class="Tests-date"><%%SELECT%%><%%VALUE(date)%%><%%ENDSELECT%%></td>
+		<td id="Tests-hour_id-<%%VALUE(id)%%>" class="Tests-hour_id"><%%SELECT%%><%%VALUE(hour_id)%%><%%ENDSELECT%%></td>
+		<td id="Tests-file-<%%VALUE(id)%%>" class="Tests-file"><a href="link.php?t=Tests&f=file&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(file)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-file text-info"></i></a></td>
+		<script>$j(function() {
+			var e_file = '<%%VALUE(file)%%>'; if(e_file == '' || e_file == '&nbsp;') $j(/*<*/ '#Tests-file-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

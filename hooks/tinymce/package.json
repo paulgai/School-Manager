@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@tinymce/tinymce-jquery": "^2.1.0",
+    "fs-extra": "^11.2.0",
+    "jquery": "^3.7.1",
+    "tinymce": "^7.0.0"
+  }
+}

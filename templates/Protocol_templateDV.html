@@ -1,0 +1,349 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/Protocol-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="Protocol_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="Protocol_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<input type="hidden" id="Incoming_Files_hclink" value="Incoming_Files_view.php?filterer_protocol_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="Outcoming_Files_hclink" value="Outcoming_Files_view.php?filterer_protocol_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="Protocol_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: &#913;&#961;&#953;&#952;&#956;&#972;&#962; &#928;&#961;&#969;&#964;&#959;&#954;&#972;&#955;&#955;&#959;&#965;: -->
+				<div class="form-group Protocol-serial_number">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">&#913;&#961;&#953;&#952;&#956;&#972;&#962; &#928;&#961;&#969;&#964;&#959;&#954;&#972;&#955;&#955;&#959;&#965;:</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="serial_number"><%%VALUE(serial_number)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: &#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#928;&#945;&#961;&#945;&#955;&#945;&#946;&#942;&#962; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+				<div class="form-group Protocol-receipt_date">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="receipt_date-dd">&#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#928;&#945;&#961;&#945;&#955;&#945;&#946;&#942;&#962; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<%%COMBO(receipt_date)%%>
+					</div>
+				</div>
+
+				<!-- Field: &#913;&#961;&#953;&#952;&#956;&#972;&#962; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+				<div class="form-group Protocol-doc_number">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="doc_number">&#913;&#961;&#953;&#952;&#956;&#972;&#962; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="doc_number" id="doc_number" value="<%%VALUE(doc_number)%%>">
+					</div>
+				</div>
+
+				<!-- Field: &#932;&#972;&#960;&#959;&#962; &#963;&#964;&#959;&#957; &#959;&#960;&#959;&#943;&#959; &#949;&#954;&#948;&#972;&#952;&#951;&#954;&#949; -->
+				<div class="form-group Protocol-place">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="place">&#932;&#972;&#960;&#959;&#962; &#963;&#964;&#959;&#957; &#959;&#960;&#959;&#943;&#959; &#949;&#954;&#948;&#972;&#952;&#951;&#954;&#949;</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="place" id="place" value="<%%VALUE(place)%%>">
+					</div>
+				</div>
+
+				<!-- Field: &#913;&#961;&#967;&#942; &#960;&#959;&#965; &#964;&#959; &#941;&#967;&#949;&#953; &#917;&#954;&#948;&#974;&#963;&#949;&#953; -->
+				<div class="form-group Protocol-authority_issuing">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="authority_issuing">&#913;&#961;&#967;&#942; &#960;&#959;&#965; &#964;&#959; &#941;&#967;&#949;&#953; &#917;&#954;&#948;&#974;&#963;&#949;&#953;</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="authority_issuing" id="authority_issuing" value="<%%VALUE(authority_issuing)%%>">
+					</div>
+				</div>
+
+				<!-- Field: &#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+				<div class="form-group Protocol-date_issuing">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="date_issuing-dd">&#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<%%COMBO(date_issuing)%%>
+					</div>
+				</div>
+
+				<!-- Field: &#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+				<div class="form-group Protocol-summary_incoming">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="summary_incoming">&#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="summary_incoming" id="summary_incoming" rows=" 3"><%%VALUE(summary_incoming)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: &#916;&#953;&#949;&#973;&#952;&#965;&#957;&#963;&#951;, &#932;&#956;&#942;&#956;&#945;, &#915;&#961;&#945;&#966;&#949;&#943;&#959; &#942; &#928;&#961;&#972;&#963;&#969;&#960;&#959; &#947;&#953;&#945; &#964;&#959; &#959;&#960;&#959;&#943;&#959; &#917;&#954;&#948;&#972;&#952;&#951;&#954;&#949; -->
+				<div class="form-group Protocol-to_whom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="to_whom">&#916;&#953;&#949;&#973;&#952;&#965;&#957;&#963;&#951;, &#932;&#956;&#942;&#956;&#945;, &#915;&#961;&#945;&#966;&#949;&#943;&#959; &#942; &#928;&#961;&#972;&#963;&#969;&#960;&#959; &#947;&#953;&#945; &#964;&#959; &#959;&#960;&#959;&#943;&#959; &#917;&#954;&#948;&#972;&#952;&#951;&#954;&#949;</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="to_whom" id="to_whom" value="<%%VALUE(to_whom)%%>">
+					</div>
+				</div>
+
+				<!-- Field: &#913;&#961;&#967;&#942; &#963;&#964;&#951;&#957; &#959;&#960;&#959;&#943;&#945; &#913;&#960;&#949;&#965;&#952;&#973;&#957;&#949;&#964;&#945;&#953; -->
+				<div class="form-group Protocol-authority_outcoming">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="authority_outcoming">&#913;&#961;&#967;&#942; &#963;&#964;&#951;&#957; &#959;&#960;&#959;&#943;&#945; &#913;&#960;&#949;&#965;&#952;&#973;&#957;&#949;&#964;&#945;&#953;</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="authority_outcoming" id="authority_outcoming" value="<%%VALUE(authority_outcoming)%%>">
+					</div>
+				</div>
+
+				<!-- Field: &#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+				<div class="form-group Protocol-summary_outcoming">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="summary_outcoming">&#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="summary_outcoming" id="summary_outcoming" rows=" 3"><%%VALUE(summary_outcoming)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: &#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+				<div class="form-group Protocol-outcoming_date">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="outcoming_date-dd">&#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<%%COMBO(outcoming_date)%%>
+					</div>
+				</div>
+
+				<!-- Field: &#919;&#956;&#949;&#961;&#959;&#956;&#951;&#957;&#943;&#945; &#916;&#953;&#949;&#954;&#960;&#949;&#961;&#945;&#943;&#969;&#963;&#951;&#962; -->
+				<div class="form-group Protocol-processing_date">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="processing_date-dd">&#919;&#956;&#949;&#961;&#959;&#956;&#951;&#957;&#943;&#945; &#916;&#953;&#949;&#954;&#960;&#949;&#961;&#945;&#943;&#969;&#963;&#951;&#962;</label>
+					<div class="col-lg-9">
+						<%%COMBO(processing_date)%%>
+					</div>
+				</div>
+
+				<!-- Field: &#934;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965; -->
+				<div class="form-group Protocol-folder_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="folder_id" data-parent_link="view_parent_modal">&#934;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<div class="lookup-flex"><%%COMBO(folder_id)%%><%%PLINK(folder_id)%%><%%ADDNEW(Folders)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: &#933;&#960;&#959;&#966;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965; -->
+				<div class="form-group Protocol-subfolder_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="subfolder_id" data-parent_link="view_parent_modal">&#933;&#960;&#959;&#966;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965;</label>
+					<div class="col-lg-9">
+						<div class="lookup-flex"><%%COMBO(subfolder_id)%%><%%PLINK(subfolder_id)%%><%%ADDNEW(Subfolders)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: &#928;&#945;&#961;&#945;&#964;&#951;&#961;&#942;&#963;&#949;&#953;&#962; -->
+				<div class="form-group Protocol-comments">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="comments">&#928;&#945;&#961;&#945;&#964;&#951;&#961;&#942;&#963;&#949;&#953;&#962;</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="comments" id="comments" rows=" 5"><%%VALUE(comments)%%></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="Protocol_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="Protocol-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			$j('#Protocol_dv_container-loading').addClass('hidden');
+			$j('#Protocol_dv_container').removeClass('hidden');
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) AppGini.focusFormElement('Protocol', 'receipt_date');
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'Protocol',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'Protocol-children'
+				);
+			}
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'Protocol',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=Protocol&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=Protocol&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

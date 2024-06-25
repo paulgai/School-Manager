@@ -1,0 +1,13 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Incoming_Files_init() hook (in hooks/Incoming_Files.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Incoming_Files-protocol_id-<%%VALUE(id)%%>" class="Incoming_Files-protocol_id text-bold"><%%VALUE(protocol_id)%%></td>
+		<td id="Incoming_Files-title-<%%VALUE(id)%%>" class="Incoming_Files-title text-bold"><%%VALUE(title)%%></td>
+		<td id="Incoming_Files-file-<%%VALUE(id)%%>" class="Incoming_Files-file text-bold"><a href="link.php?t=Incoming_Files&f=file&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(file)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-file text-info"></i></a></td>
+		<script>$j(function() {
+			var e_file = '<%%VALUE(file)%%>'; if(e_file == '' || e_file == '&nbsp;') $j(/*<*/ '#Incoming_Files-file-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

@@ -1,0 +1,16 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Lessons_init() hook (in hooks/Lessons.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Lessons-Class-<%%VALUE(id)%%>" class="Lessons-Class text-bold"><%%VALUE(Class)%%></td>
+		<td id="Lessons-Name-<%%VALUE(id)%%>" class="Lessons-Name text-bold"><%%VALUE(Name)%%></td>
+		<td id="Lessons-Type-<%%VALUE(id)%%>" class="Lessons-Type text-bold"><%%VALUE(Type)%%></td>
+		<td id="Lessons-Hours-<%%VALUE(id)%%>" class="Lessons-Hours text-right text-bold"><%%VALUE(Hours)%%></td>
+		<td id="Lessons-A_assignment-<%%VALUE(id)%%>" class="Lessons-A_assignment text-bold"><%%VALUE(A_assignment)%%></td>
+		<td id="Lessons-B_assignment-<%%VALUE(id)%%>" class="Lessons-B_assignment text-bold"><%%VALUE(B_assignment)%%></td>
+		<td id="Lessons-C_assignment-<%%VALUE(id)%%>" class="Lessons-C_assignment text-bold"><%%VALUE(C_assignment)%%></td>
+		<td class="child-Assignments-LessonID child-records-info" data-id="<%%VALUE(id)%%>" data-table="Assignments" data-lookup-field="LessonID">
+		</td>

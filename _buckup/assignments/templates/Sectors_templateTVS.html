@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Sectors_init() hook (in hooks/Sectors.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Sectors-Sector-<%%VALUE(id)%%>" class="Sectors-Sector text-bold"><%%VALUE(Sector)%%></td>
+		<td class="child-Teachers-SectorID child-records-info" data-id="<%%VALUE(id)%%>" data-table="Teachers" data-lookup-field="SectorID">
+		</td>

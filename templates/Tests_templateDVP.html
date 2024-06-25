@@ -1,0 +1,64 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: &#917;&#954;&#960;&#945;&#953;&#948;&#949;&#965;&#964;&#953;&#954;&#972;&#962; -->
+		<div class="form-group Tests-teacher_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#917;&#954;&#960;&#945;&#953;&#948;&#949;&#965;&#964;&#953;&#954;&#972;&#962;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="teacher_id<%%RND1%%>"><%%COMBOTEXT(teacher_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: &#924;&#940;&#952;&#951;&#956;&#945; -->
+		<div class="form-group Tests-assignments_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#924;&#940;&#952;&#951;&#956;&#945;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="assignments_id<%%RND1%%>"><%%COMBOTEXT(assignments_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: &#919;&#956;&#941;&#961;&#945; -->
+		<div class="form-group Tests-date" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#919;&#956;&#941;&#961;&#945;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(date)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#911;&#961;&#945; -->
+		<div class="form-group Tests-hour_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#911;&#961;&#945;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="hour_id<%%RND1%%>"><%%COMBOTEXT(hour_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: &#916;&#953;&#945;&#947;&#974;&#957;&#953;&#963;&#956;&#945; -->
+		<div class="form-group Tests-file" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#916;&#953;&#945;&#947;&#974;&#957;&#953;&#963;&#956;&#945;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><a id="file-link" href="link.php?t=Tests&f=file&i=<%%VALUE(id)%%>" target="_blank"><i class="glyphicon glyphicon-lg glyphicon-file" title="<%%VALUE(file)%%>"></i></a><script>jQuery(function() { var e_file = '<%%VALUE(file)%%>'; if(e_file == '' || e_file == '&nbsp;' || e_file == 'blank.gif') jQuery('#file-link').hide(); });</script></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

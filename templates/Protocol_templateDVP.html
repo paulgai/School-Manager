@@ -1,0 +1,163 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: &#913;&#961;&#953;&#952;&#956;&#972;&#962; &#928;&#961;&#969;&#964;&#959;&#954;&#972;&#955;&#955;&#959;&#965;: -->
+		<div class="form-group Protocol-serial_number" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#913;&#961;&#953;&#952;&#956;&#972;&#962; &#928;&#961;&#969;&#964;&#959;&#954;&#972;&#955;&#955;&#959;&#965;:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(serial_number)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#928;&#945;&#961;&#945;&#955;&#945;&#946;&#942;&#962; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+		<div class="form-group Protocol-receipt_date" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#928;&#945;&#961;&#945;&#955;&#945;&#946;&#942;&#962; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(receipt_date)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#913;&#961;&#953;&#952;&#956;&#972;&#962; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+		<div class="form-group Protocol-doc_number" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#913;&#961;&#953;&#952;&#956;&#972;&#962; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(doc_number)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#932;&#972;&#960;&#959;&#962; &#963;&#964;&#959;&#957; &#959;&#960;&#959;&#943;&#959; &#949;&#954;&#948;&#972;&#952;&#951;&#954;&#949; -->
+		<div class="form-group Protocol-place" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#932;&#972;&#960;&#959;&#962; &#963;&#964;&#959;&#957; &#959;&#960;&#959;&#943;&#959; &#949;&#954;&#948;&#972;&#952;&#951;&#954;&#949;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(place)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#913;&#961;&#967;&#942; &#960;&#959;&#965; &#964;&#959; &#941;&#967;&#949;&#953; &#917;&#954;&#948;&#974;&#963;&#949;&#953; -->
+		<div class="form-group Protocol-authority_issuing" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#913;&#961;&#967;&#942; &#960;&#959;&#965; &#964;&#959; &#941;&#967;&#949;&#953; &#917;&#954;&#948;&#974;&#963;&#949;&#953;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(authority_issuing)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+		<div class="form-group Protocol-date_issuing" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(date_issuing)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+		<div class="form-group Protocol-summary_incoming" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#953;&#963;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(summary_incoming)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#916;&#953;&#949;&#973;&#952;&#965;&#957;&#963;&#951;, &#932;&#956;&#942;&#956;&#945;, &#915;&#961;&#945;&#966;&#949;&#943;&#959; &#942; &#928;&#961;&#972;&#963;&#969;&#960;&#959; &#947;&#953;&#945; &#964;&#959; &#959;&#960;&#959;&#943;&#959; &#917;&#954;&#948;&#972;&#952;&#951;&#954;&#949; -->
+		<div class="form-group Protocol-to_whom" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#916;&#953;&#949;&#973;&#952;&#965;&#957;&#963;&#951;, &#932;&#956;&#942;&#956;&#945;, &#915;&#961;&#945;&#966;&#949;&#943;&#959; &#942; &#928;&#961;&#972;&#963;&#969;&#960;&#959; &#947;&#953;&#945; &#964;&#959; &#959;&#960;&#959;&#943;&#959; &#917;&#954;&#948;&#972;&#952;&#951;&#954;&#949;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(to_whom)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#913;&#961;&#967;&#942; &#963;&#964;&#951;&#957; &#959;&#960;&#959;&#943;&#945; &#913;&#960;&#949;&#965;&#952;&#973;&#957;&#949;&#964;&#945;&#953; -->
+		<div class="form-group Protocol-authority_outcoming" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#913;&#961;&#967;&#942; &#963;&#964;&#951;&#957; &#959;&#960;&#959;&#943;&#945; &#913;&#960;&#949;&#965;&#952;&#973;&#957;&#949;&#964;&#945;&#953;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(authority_outcoming)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+		<div class="form-group Protocol-summary_outcoming" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#928;&#949;&#961;&#943;&#955;&#951;&#968;&#951; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(summary_outcoming)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965; -->
+		<div class="form-group Protocol-outcoming_date" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#935;&#961;&#959;&#957;&#959;&#955;&#959;&#947;&#943;&#945; &#917;&#958;&#949;&#961;&#967;&#959;&#956;&#941;&#957;&#959;&#965; &#917;&#947;&#947;&#961;&#940;&#966;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(outcoming_date)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#919;&#956;&#949;&#961;&#959;&#956;&#951;&#957;&#943;&#945; &#916;&#953;&#949;&#954;&#960;&#949;&#961;&#945;&#943;&#969;&#963;&#951;&#962; -->
+		<div class="form-group Protocol-processing_date" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#919;&#956;&#949;&#961;&#959;&#956;&#951;&#957;&#943;&#945; &#916;&#953;&#949;&#954;&#960;&#949;&#961;&#945;&#943;&#969;&#963;&#951;&#962;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(processing_date)%%></div>
+			</div>
+		</div>
+		<!-- Field: &#934;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965; -->
+		<div class="form-group Protocol-folder_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#934;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="folder_id<%%RND1%%>"><%%COMBOTEXT(folder_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: &#933;&#960;&#959;&#966;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965; -->
+		<div class="form-group Protocol-subfolder_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#933;&#960;&#959;&#966;&#940;&#954;&#949;&#955;&#959;&#962; &#913;&#961;&#967;&#949;&#943;&#959;&#965;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="subfolder_id<%%RND1%%>"><%%COMBOTEXT(subfolder_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: &#928;&#945;&#961;&#945;&#964;&#951;&#961;&#942;&#963;&#949;&#953;&#962; -->
+		<div class="form-group Protocol-comments" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">&#928;&#945;&#961;&#945;&#964;&#951;&#961;&#942;&#963;&#949;&#953;&#962;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(comments)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>
+<!-- child records -->
+<div class="panel-body">
+	<div id="Protocol-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=Protocol-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'Protocol',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'Protocol-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

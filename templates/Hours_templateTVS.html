@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Hours_init() hook (in hooks/Hours.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Hours-name-<%%VALUE(id)%%>" class="Hours-name text-bold"><%%VALUE(name)%%></td>
+		<td id="Hours-start_time-<%%VALUE(id)%%>" class="Hours-start_time text-bold"><%%VALUE(start_time)%%></td>
+		<td id="Hours-end_time-<%%VALUE(id)%%>" class="Hours-end_time text-bold"><%%VALUE(end_time)%%></td>

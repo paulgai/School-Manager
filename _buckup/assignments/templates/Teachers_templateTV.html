@@ -1,0 +1,18 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Teachers_init() hook (in hooks/Teachers.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Teachers-SectorID-<%%VALUE(id)%%>" class="Teachers-SectorID"><%%SELECT%%><%%VALUE(SectorID)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Name_Sector-<%%VALUE(id)%%>" class="Teachers-Name_Sector"><%%SELECT%%><%%VALUE(Name_Sector)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Placement-<%%VALUE(id)%%>" class="Teachers-Placement"><%%SELECT%%><%%VALUE(Placement)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Assumption_Date-<%%VALUE(id)%%>" class="Teachers-Assumption_Date"><%%SELECT%%><%%VALUE(Assumption_Date)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Mandatory_Hours-<%%VALUE(id)%%>" class="Teachers-Mandatory_Hours text-right"><%%SELECT%%><%%VALUE(Mandatory_Hours)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Assigned_Hours_Theory-<%%VALUE(id)%%>" class="Teachers-Assigned_Hours_Theory text-right"><%%SELECT%%><%%VALUE(Assigned_Hours_Theory)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Assigned_Hours_Lab-<%%VALUE(id)%%>" class="Teachers-Assigned_Hours_Lab text-right"><%%SELECT%%><%%VALUE(Assigned_Hours_Lab)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Assigned_Hours-<%%VALUE(id)%%>" class="Teachers-Assigned_Hours text-right"><%%SELECT%%><%%VALUE(Assigned_Hours)%%><%%ENDSELECT%%></td>
+		<td id="Teachers-Diff-<%%VALUE(id)%%>" class="Teachers-Diff text-right"><%%SELECT%%><%%VALUE(Diff)%%><%%ENDSELECT%%></td>
+		<td class="child-Assignments-TeacherID child-records-info" data-id="<%%VALUE(id)%%>" data-table="Assignments" data-lookup-field="TeacherID">
+		</td>

@@ -1,0 +1,22 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Protocol_init() hook (in hooks/Protocol.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Protocol-serial_number-<%%VALUE(id)%%>" class="Protocol-serial_number text-right"><%%SELECT%%><%%VALUE(serial_number)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-receipt_date-<%%VALUE(id)%%>" class="Protocol-receipt_date"><%%SELECT%%><%%VALUE(receipt_date)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-doc_number-<%%VALUE(id)%%>" class="Protocol-doc_number"><%%SELECT%%><%%VALUE(doc_number)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-place-<%%VALUE(id)%%>" class="Protocol-place"><%%SELECT%%><%%VALUE(place)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-authority_issuing-<%%VALUE(id)%%>" class="Protocol-authority_issuing"><%%SELECT%%><%%VALUE(authority_issuing)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-date_issuing-<%%VALUE(id)%%>" class="Protocol-date_issuing"><%%SELECT%%><%%VALUE(date_issuing)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-summary_incoming-<%%VALUE(id)%%>" class="Protocol-summary_incoming"><%%SELECT%%><%%VALUE(summary_incoming)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-to_whom-<%%VALUE(id)%%>" class="Protocol-to_whom"><%%SELECT%%><%%VALUE(to_whom)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-authority_outcoming-<%%VALUE(id)%%>" class="Protocol-authority_outcoming"><%%SELECT%%><%%VALUE(authority_outcoming)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-summary_outcoming-<%%VALUE(id)%%>" class="Protocol-summary_outcoming"><%%SELECT%%><%%VALUE(summary_outcoming)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-outcoming_date-<%%VALUE(id)%%>" class="Protocol-outcoming_date"><%%SELECT%%><%%VALUE(outcoming_date)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-processing_date-<%%VALUE(id)%%>" class="Protocol-processing_date"><%%SELECT%%><%%VALUE(processing_date)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-folder_id-<%%VALUE(id)%%>" class="Protocol-folder_id"><%%SELECT%%><%%VALUE(folder_id)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-subfolder_id-<%%VALUE(id)%%>" class="Protocol-subfolder_id"><%%SELECT%%><%%VALUE(subfolder_id)%%><%%ENDSELECT%%></td>
+		<td id="Protocol-comments-<%%VALUE(id)%%>" class="Protocol-comments"><%%SELECT%%><%%VALUE(comments)%%><%%ENDSELECT%%></td>

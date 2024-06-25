@@ -1,0 +1,9 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Projectors_init() hook (in hooks/Projectors.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Projectors-img-<%%VALUE(id)%%>" class="Projectors-img"><%%SELECT%%><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=Projectors&f=img&v=tv" class="img-thumbnail"><%%ENDSELECT%%></td>
+		<td id="Projectors-name-<%%VALUE(id)%%>" class="Projectors-name"><%%SELECT%%><%%VALUE(name)%%><%%ENDSELECT%%></td>

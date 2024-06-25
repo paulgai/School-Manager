@@ -1,0 +1,11 @@
+10/9/2023 2:29:15 µµ:
+Started uploading files from: C:\Users\paul\Documents\GitHub\Assignments
+                          to: https://6epal-esp-thess.gr/assignments
+
+Secret upload key configured in AppGini Preferences: Ok
+Application URL specified in project properties > Security settings: Ok
+curl is installed: Ok
+Application URL is valid: Ok
+'file-uploader.php' uploaded to your server: Ok
+'file-uploader.php' is configured with the correct secret upload key: FAILED
+Uploading aborted due to failed check(s)
